@@ -18,3 +18,4 @@ mongoose.connect(
     console.log('MongoDB connection established');
   },
 );
+app.use('/users', require('./src/routes/user'));
