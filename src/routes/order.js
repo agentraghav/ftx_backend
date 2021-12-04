@@ -2,7 +2,7 @@ const router = require('express').Router();
 const auth = require('../middleware/auth');
 const Order = require('../models/order.model');
 // post order
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
   try {
     let {userId, products} = req.body;
     // validate
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
   }
 });
 // Get orders
-router.get('/:userId', async (req, res) => {
+router.get('/:userId', auth, async (req, res) => {
   try {
     // validate
     const userId = req.params.userId;
