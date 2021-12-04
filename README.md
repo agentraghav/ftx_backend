@@ -26,3 +26,5 @@ The backend is build using NodeJs and Express
 - Razorpay: Official nodejs library for Razorpay API.
 - Mongoose: Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment. Mongoose supports both promises and callbacks.
 - ShortId: Amazingly short non-sequential url-friendly unique id generator.
+
+### FTX HEBE FRONTEND REPO :- https://github.com/agentraghav/ftx_frontend
