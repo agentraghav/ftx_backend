@@ -11,6 +11,7 @@ const connectDB = async () => {
     await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
+      useCreateIndex: true,
     });
 
     console.log('MongoDB connected...');
@@ -31,5 +32,6 @@ app.get('/', (req, res) => res.send('API Running'));
 
 app.use('/api/order', require('./src/routes/order'));
 app.use('/users', require('./src/routes/user'));
+app.use('/razorpay', require('./src/routes/razorpay'));
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`The server has started on port: ${PORT}`));
